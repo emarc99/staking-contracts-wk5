@@ -3,13 +3,13 @@ pragma solidity ^0.8.17;
 
 contract EtherStaking {
     address public owner;
-    uint256 public rewardRatePerSecond; // Reward rate per second
-    uint256 public minimumStakingTime = 1 days; // Minimum staking time required to earn rewards
+    uint256 public rewardRatePerSecond; 
+    uint256 public minimumStakingTime = 1 days; // 
 
     struct Stake {
-        uint256 amount;         // Amount of Ether staked
-        uint256 startTime;      // Timestamp when the staking started
-        bool withdrawn;         // Flag to indicate if the stake has been withdrawn
+        uint256 amount;      
+        uint256 startTime;      
+        bool withdrawn;         
     }
 
     mapping(address => Stake) public stakes;
