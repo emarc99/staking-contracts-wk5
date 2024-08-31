@@ -54,6 +54,11 @@ contract EtherStaking {
         emit Staked(msg.sender, msg.value, block.timestamp);
     }
 
+    // View user's current balance in the staking contract
+    function myBalance() external view returns (uint256) {
+        return stakes[msg.sender].amount;
+    }
+
     // Function to calculate the reward based on staking duration
     function calculateReward(address _user) public view returns (uint256) {
         Stake memory userStake = stakes[_user];
