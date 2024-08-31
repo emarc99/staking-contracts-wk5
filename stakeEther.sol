@@ -103,8 +103,4 @@ contract EtherStaking {
         startTime = userStake.startTime;
     }
 
-    // Fallback function to prevent accidental Ether transfers to the contract
-    receive() external payable {
-        revert("Direct Ether transfers not allowed");
-    }
 }
